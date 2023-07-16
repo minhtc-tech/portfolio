@@ -1,0 +1,14 @@
+{
+  "Project's Init Component": {
+    "prefix": "icp",
+    "body": [
+      "const $1 = () => {",
+      "\treturn (",
+      "\t\t$2",
+      "\t);",
+      "};",
+      "",
+      "export default $1;"
+    ]
+  }
+}

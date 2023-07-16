@@ -1,0 +1,19 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "cSpell.words": ["clsx", "Minh", "nunito", "tailwindcss"],
+  "files.exclude": {
+    "node_modules": true,
+    ".next": true,
+    "package-lock.json": true,
+
+    "postcss.config.js": true, // not use yet
+
+    // next default - should not be edited
+    "next.config.js": true,
+    "next-env.d.ts": true
+  },
+
+  "tailwindCSS.classAttributes": ["className", "hoverClasses"]
+}
