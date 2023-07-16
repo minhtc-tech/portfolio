@@ -2,7 +2,7 @@ import { Nunito } from 'next/font/google'
 import Header from '@/components/templates/layouts/Header'
 import Footer from '@/components/templates/layouts/Footer'
 import './globals.css'
-// import AnimatedCursor from '@/components/atoms/animatedCursor'
+import AnimatedCursor from '@/components/atoms/AnimatedCursor'
 
 const nunito = Nunito({
   subsets: ['latin'],
@@ -23,7 +23,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        {/* <AnimatedCursor /> */}
+        <AnimatedCursor />
       </body>
     </html>
   )

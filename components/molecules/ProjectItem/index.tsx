@@ -8,6 +8,7 @@ import {
   PROJECT_IMG_RATIO,
 } from '@/utils/config'
 import Image from 'next/image'
+import { CLICKABLE_CLASS } from '@/components/atoms/AnimatedCursor'
 
 const projectItemImgHeight = 206
 
@@ -27,13 +28,12 @@ const ProjectItem = ({
   mainTechStacks,
 }: ProjectItemProps) => {
   return (
-    <button
-      type='button'
+    <div
       className={clsx(
-        'group overflow-hidden',
+        'group w-full overflow-hidden bg-neutral-50',
         'rounded-md border-md border-primary drop-shadow-md',
-        'w-full bg-neutral-50',
         'transition-all hover:drop-shadow-none',
+        CLICKABLE_CLASS,
       )}
     >
       <div
@@ -95,7 +95,7 @@ const ProjectItem = ({
           ))}
         </div>
       </div>
-    </button>
+    </div>
   )
 }
 

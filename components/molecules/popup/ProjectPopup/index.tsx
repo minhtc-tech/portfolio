@@ -160,7 +160,7 @@ const ProjectPopup = ({ projectItem, onClosePopup }: ProjectPopupProps) => {
             onClick={closePopup}
             title='Close popup'
             className={clsx(
-              'group -mb-1 mr-6 bg-primary-50 px-5 pb-2 pt-3',
+              'group -mb-1 mr-6 bg-primary-50 px-5 pb-[9px] pt-3',
               'rounded-tl-md rounded-tr-md border-lg border-primary',
               'transition-all hover:bg-primary-600',
             )}
