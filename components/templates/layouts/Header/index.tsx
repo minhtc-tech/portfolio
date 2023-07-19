@@ -88,7 +88,7 @@ const Header = () => {
           <div className='mb-8 md:mb-0'>
             <a
               target='_blank'
-              href='https://minhtc-tech.hashnode.dev/'
+              href='https://blog.minhtc.tech/'
               className='group flex justify-center'
             >
               <div
