@@ -12,7 +12,7 @@ const LinkItem = ({ label, link, onClick }: LinkItemProps) => {
   const pathname = usePathname()
 
   return (
-    <div className='mb-12 md:mb-0'>
+    <div className='mb-8 md:mb-0'>
       <Link href={link} onClick={onClick} className='group flex justify-center'>
         <div
           className={clsx(

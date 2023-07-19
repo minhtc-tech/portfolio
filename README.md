@@ -1,8 +1,9 @@
 # MinhTC.Tech Portfolio
 
-![Portfolio Demo](images/porfolio-demo.webp)
+![Portfolio Demo](images/demo.webp)
 
 - This is my personal portfolio website built with Next.js and Tailwind CSS. It showcases my skills, projects, and experience as a front-end developer.
+- Live demo: https://minhtc.tech/
 - Please give this source a star, thank you so much 🥰.
 
 ## Technologies 🔧
@@ -40,16 +41,9 @@ To run the project locally, follow these steps:
 3. Start the development server: `npm run dev`
 4. Open your browser and visit `http://localhost:3000` to view the portfolio.
 
-## Customization
-
-Feel free to customize the portfolio to suit your own needs:
-
-- Update the content in the pages and components to reflect your own skills, projects, and experience.
-- Add or remove components based on your specific requirements.
-
 ## Deployment
 
-To deploy the portfolio, follow the deployment instructions for Next.js. You can choose your preferred hosting platform, such as Vercel, Netlify, or Heroku.
+- To deploy the portfolio, follow the deployment instructions for Next.js. You can choose your preferred hosting platform, such as Vercel, Netlify, or Heroku.
 
 ## Credits
 
@@ -61,8 +55,4 @@ The design and layout of this portfolio project were inspired by various online 
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it according to the terms of the license.
-
----
-
-You can use this README file as a starting point for your own project. Remember to update the content, instructions, and credits sections with your specific information and customizations.
+- This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it according to the terms of the license.

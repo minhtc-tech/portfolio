@@ -1,19 +1,11 @@
 import Button from '@/components/atoms/Button'
 import CloseIcon from '@/components/atoms/icons/close'
 import LinkIcon from '@/components/atoms/icons/link'
-import LevelLabel from '@/components/atoms/LevelLabel'
 import { ProjectItemInterface } from '@/types/project'
-import {
-  ICON_SIZE_SM,
-  IMG_PROJECT_PREFIX,
-  IMG_TECH_PREFIX,
-  PROJECT_IMG_RATIO,
-} from '@/utils/config'
+import { ICON_SIZE_SM, IMG_TECH_PREFIX } from '@/utils/config'
 import clsx from 'clsx'
 import Image from 'next/image'
 import { useState } from 'react'
-
-const projectItemImgHeight = 300
 
 interface ProjectPopupProps {
   projectItem: ProjectItemInterface
@@ -30,35 +22,6 @@ const ProjectPopup = ({ projectItem, onClosePopup }: ProjectPopupProps) => {
       onClosePopup()
     }, 150)
   }
-
-  const projectImg = (
-    <div
-      className={clsx(
-        'relative overflow-hidden',
-        'border-b-lg border-primary bg-primary-50',
-        'flex max-h-[300px] items-center justify-center',
-      )}
-    >
-      <Image
-        src={`${IMG_PROJECT_PREFIX}${projectItem.img}`}
-        width={projectItemImgHeight * PROJECT_IMG_RATIO}
-        height={projectItemImgHeight}
-        alt={projectItem.name}
-        className='w-full transition-all group-hover:scale-110'
-      />
-      <div
-        className={clsx(
-          'absolute -right-1 -top-1',
-          'bg-primary-600 px-3 py-2',
-          'rounded-bl-sm border-lg',
-        )}
-      >
-        <div className='-mt-[1px]'>
-          <LevelLabel level={Number(projectItem.level)} />
-        </div>
-      </div>
-    </div>
-  )
 
   const projectContent = (
     <div className='px-3 pb-7 sm:px-4 md:px-6'>
@@ -115,7 +78,7 @@ const ProjectPopup = ({ projectItem, onClosePopup }: ProjectPopupProps) => {
         <a href={projectItem.livePreview} target='_blank'>
           <Button
             type='primary'
-            content={projectItem.livePreview}
+            content={projectItem.livePreview.replace('https://', '')}
             tooltip='View the live version'
             iconPosition='left'
             icon={<LinkIcon hoverClasses='' type='light' />}
@@ -153,7 +116,6 @@ const ProjectPopup = ({ projectItem, onClosePopup }: ProjectPopupProps) => {
           className={clsx(
             'flex flex-wrap justify-end',
             'max-h-screen w-full max-w-[612px] overflow-auto',
-            'pt-3 sm:pt-4 md:pt-8',
           )}
         >
           <button
@@ -178,7 +140,6 @@ const ProjectPopup = ({ projectItem, onClosePopup }: ProjectPopupProps) => {
               'rounded-lg border-lg border-primary',
             )}
           >
-            {projectImg}
             {projectContent}
           </div>
         </div>

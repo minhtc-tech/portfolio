@@ -3,7 +3,6 @@ import LinkIcon from '@/components/atoms/icons/link'
 import LevelLabel from '@/components/atoms/LevelLabel'
 import {
   ICON_SIZE_SM,
-  IMG_PROJECT_PREFIX,
   IMG_TECH_PREFIX,
   PROJECT_IMG_RATIO,
 } from '@/utils/config'
@@ -40,18 +39,18 @@ const ProjectItem = ({
         className={clsx(
           'relative overflow-hidden',
           'border-b-md border-primary bg-primary-50',
-          'flex max-h-[206px] items-center justify-center',
+          'flex h-[206px] items-start',
           'after:bg-gradient-to-r after:from-transparent after:via-neutral-50 after:to-transparent after:opacity-30',
           'after:absolute after:-left-[360px] after:top-0 after:h-full after:w-1/3 after:content-[""]',
           'group-hover:after:animate-highLight',
         )}
       >
         <Image
-          src={`${IMG_PROJECT_PREFIX}${img}`}
+          src={img}
           width={projectItemImgHeight * PROJECT_IMG_RATIO}
           height={projectItemImgHeight}
-          alt='project'
-          className='w-full transition-all group-hover:scale-110'
+          alt={name}
+          className='min-h-[206px] transition-all group-hover:scale-110'
         />
         <div
           className={clsx(

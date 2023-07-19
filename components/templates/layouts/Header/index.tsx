@@ -74,7 +74,7 @@ const Header = () => {
         <nav
           className={clsx(
             'md:flex md:flex-1 md:items-center md:gap-8',
-            'w-full pb-8 md:pb-0 md:pl-9',
+            'w-full pb-4 md:pb-0 md:pl-9',
           )}
         >
           {headerLinks.map((item) => (
@@ -85,6 +85,30 @@ const Header = () => {
               link={item.link}
             />
           ))}
+          <div className='mb-8 md:mb-0'>
+            <a
+              target='_blank'
+              href='https://minhtc-tech.hashnode.dev/'
+              className='group flex justify-center'
+            >
+              <div
+                className={clsx(
+                  'relative py-1',
+                  'text-center text-lg font-bold text-invert md:text-primary',
+                )}
+              >
+                Blog
+                <div
+                  className={clsx(
+                    'w-0 border-invert md:border-primary lg:border-primary',
+                    'absolute bottom-0 left-0',
+                    'h-0 rounded-sm border-t-md border-highLight',
+                    'transition-all duration-300 group-hover:w-full',
+                  )}
+                />
+              </div>
+            </a>
+          </div>
         </nav>
 
         <a
