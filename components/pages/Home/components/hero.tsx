@@ -32,8 +32,10 @@ const HeroSection = () => {
             </span>
             <br />
             <span className='inline-block pt-6 text-lg font-bold text-primary'>
-              <span className={mainHighLightClass}>Front-End</span> Developer
-              focus on <span className={mainHighLightClass}>React</span>
+              An enthusiastic{' '}
+              <span className={clsx(mainHighLightClass, 'pl-1')}>
+                JavaScript Developer
+              </span>
             </span>
           </div>
           <div className='text-center sm:hidden'>
@@ -45,7 +47,7 @@ const HeroSection = () => {
             </span>
             <br />
             <span className='inline-block pt-4 text-2xl font-extraBold text-highLight'>
-              Front-End / React
+              JavaScript Developer
             </span>
           </div>
 
