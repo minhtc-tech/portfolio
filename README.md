@@ -1,58 +1,33 @@
 # MinhTC.Tech Portfolio
 
-![Portfolio Demo](images/demo.webp)
+![Portfolio Demo](public/demo.webp)
 
-- This is my personal portfolio website built with Next.js and Tailwind CSS. It showcases my skills, projects, and experience as a front-end developer.
-- Live demo: https://minhtc.tech/
-- Please give this source a star, thank you so much 🥰.
+- This is my personal portfolio website. It showcases my skills, projects, and experience as a Software Engineer.
+- Live demo: https://minhtc.tech
+- Could you help me give this source a star? I would appreciate it a lot 🥰.
 
 ## Technologies 🔧
 
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- [Next.js](https://nextjs.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [Atomic Design Pattern](https://atomicdesign.bradfrost.com)
+- [Tailwind CSS](https://tailwindcss.com)
 
 ## Project Structure 🔍
 
-The project follows the Atomic Design pattern for component organization and scalability. The structure is as follows:
+This project is currently in development, the `src` folder structure is as follows:
 
 ```
-src/
-  - components/
-    - atoms/
-    - molecules/
-    - organisms/
-    - templates/
-    - pages/
-  - app/
-  - tailwind.config.js
-  - ...
+  src/
+  - app: Next.js App Router
+  - components: Follow Atomic Design Pattern
+  - types: Reusable TypeScript Type
+  - utils: Reusable Function
 ```
 
-- The `components` directory contains atomic components grouped into folders: `atoms`, `molecules`, `organisms`, `templates`, and `pages`. This structure promotes component reusability and maintainability.
-- The `app` directory contains Next.js page components that define the routes and layout of the website.
-- Classes and styling is configured the `tailwind.config.js` file.
+## Install 💾
 
-## Installation 💾
-
-To run the project locally, follow these steps:
-
-1. Clone the repository: `git clone <repository-url>`
+1. Clone the repository: `git clone git@github.com:minhtc-tech/portfolio.git`
 2. Install the dependencies: `npm install`
 3. Start the development server: `npm run dev`
 4. Open your browser and visit `http://localhost:3000` to view the portfolio.
-
-## Deployment
-
-- To deploy the portfolio, follow the deployment instructions for Next.js. You can choose your preferred hosting platform, such as Vercel, Netlify, or Heroku.
-
-## Credits
-
-The design and layout of this portfolio project were inspired by various online resources and templates.
-
-- [Next.js documentation](https://nextjs.org/docs)
-- [Tailwind CSS documentation](https://tailwindcss.com/docs)
-- [Atomic Design methodology](https://atomicdesign.bradfrost.com/)
-
-## License
-
-- This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it according to the terms of the license.

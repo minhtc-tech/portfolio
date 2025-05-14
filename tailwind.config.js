@@ -20,7 +20,8 @@ const overlayOpacityHEX = 45
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./components/**/*.tsx', './app/**/*.tsx'],
+  content: ['./src/**/*.tsx'],
+  plugins: [require('@tailwindcss/typography')],
 
   theme: {
     screens: {

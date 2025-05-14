@@ -8,6 +8,12 @@ const nextConfig = {
         port: '',
         pathname: '/minhtc-tech/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.hashnode.com',
+        port: '',
+        pathname: '/res/**',
+      },
     ],
   },
 }

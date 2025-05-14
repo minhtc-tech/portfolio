@@ -1,4 +1,5 @@
 {
+  "files.autoSave": "off",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
 
@@ -14,5 +15,5 @@
     "next-env.d.ts": true
   },
 
-  "tailwindCSS.classAttributes": ["className", "hoverClasses"]
+  "tailwindCSS.classAttributes": ["className"]
 }
