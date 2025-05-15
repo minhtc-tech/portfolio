@@ -28,7 +28,7 @@ export default function ProjectItem({
   return (
     <div
       className={clsx(
-        'group w-full overflow-hidden bg-neutral-50',
+        'group w-full overflow-hidden bg-white',
         'rounded-md border-md border-primary drop-shadow-md',
         'cursor-pointer transition-all hover:drop-shadow-none',
       )}
@@ -39,7 +39,7 @@ export default function ProjectItem({
           'border-b-md border-primary bg-primary-50',
           'flex h-[206px] items-start',
           'after:bg-gradient-to-r after:opacity-30',
-          'after:from-transparent after:via-neutral-50 after:to-transparent',
+          'after:from-transparent after:via-white after:to-transparent',
           'after:h-full after:w-1/3 after:content-[""]',
           'after:absolute after:-left-[360px] after:top-0',
           'group-hover:after:animate-highLight',
@@ -58,7 +58,7 @@ export default function ProjectItem({
         <div
           className={clsx(
             'absolute -right-[2px] -top-[2px]',
-            'bg-primary-600 px-3 py-2',
+            'bg-primary-800 px-3 py-2',
             'rounded-bl-sm border-md',
           )}
         >

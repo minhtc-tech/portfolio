@@ -59,7 +59,7 @@ export default function FilterSelectGroup({
         <div
           className={clsx(
             'mt-1 w-max',
-            'overflow-hidden bg-neutral-50',
+            'bg-white overflow-hidden',
             'rounded-sm border-md border-primary drop-shadow-md',
           )}
         >

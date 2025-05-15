@@ -114,7 +114,7 @@ export default function BlogListSection({ blogData }: Props) {
               key={blogItem.node.slug}
               href={`/blog/${blogItem.node.slug}`}
               className={clsx(
-                'group w-full overflow-hidden bg-neutral-50',
+                'group w-full overflow-hidden bg-white',
                 'rounded-md border-md border-primary drop-shadow-md',
                 'transition-all hover:drop-shadow-none',
               )}
@@ -124,7 +124,7 @@ export default function BlogListSection({ blogData }: Props) {
                   'relative overflow-hidden',
                   'border-b-md border-primary bg-primary-50',
                   'flex h-[168px] items-start',
-                  'after:bg-gradient-to-r after:from-transparent after:via-neutral-50 after:to-transparent after:opacity-30',
+                  'after:bg-gradient-to-r after:from-transparent after:via-white after:to-transparent after:opacity-30',
                   'after:absolute after:-left-[360px] after:top-0 after:h-full after:w-1/3 after:content-[""]',
                   'group-hover:after:animate-highLight',
                 )}

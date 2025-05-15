@@ -19,7 +19,7 @@ export default function Button({
       {...attr}
       className={clsx(
         variant === 'primary'
-          ? 'text-invert before:bg-primary-600 after:bg-primary-700'
+          ? 'text-invert before:bg-primary-800 after:bg-primary-700'
           : 'text-primary after:bg-primary-50',
 
         'before:absolute before:-z-20',

@@ -20,13 +20,13 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang='en'>
-      <body className={`${font.className} bg-neutral-50`}>
+      <body className={`${font.className} bg-white`}>
         {children}
 
         <Cursor
-          color='236, 72, 153'
+          color='231, 0, 11'
           innerSize={12}
-          innerScale={0.9}
+          innerScale={0.8}
           clickables={['.cursor-pointer', 'button', 'a', 'input']}
         />
       </body>

@@ -17,7 +17,7 @@ export default function Footer() {
     <footer
       className={clsx(
         'flex flex-wrap-reverse items-center justify-center gap-12',
-        'bg-neutral-800 py-12',
+        'bg-black py-12',
       )}
     >
       <div className={footerColClasses}>

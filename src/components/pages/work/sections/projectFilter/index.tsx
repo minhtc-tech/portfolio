@@ -43,7 +43,7 @@ export default function ProjectFilterSection({ filter, setFilter }: Props) {
   const filterLabelClasses = clsx(
     'group flex h-10 items-center gap-2 px-3 py-2',
     'rounded-full border-sm border-highLight',
-    'transition-all hover:bg-primary-600',
+    'transition-all hover:bg-primary-800',
   )
 
   return (

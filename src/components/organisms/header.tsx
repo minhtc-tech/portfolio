@@ -35,7 +35,7 @@ export default function Header() {
         className={clsx(
           'group p-3 md:hidden',
           'rounded-sm border-md border-highLight',
-          'transition-all hover:bg-primary-600',
+          'transition-all hover:bg-primary-800',
         )}
       >
         <MenuIcon />
@@ -47,7 +47,7 @@ export default function Header() {
           'fixed bottom-0 left-0 right-0 top-0 z-50 -translate-x-full',
           'md:static md:translate-x-0',
           'flex flex-wrap content-center justify-center md:flex-1 md:justify-between',
-          'bg-neutral-800 md:bg-transparent',
+          'bg-black md:bg-transparent',
           'transition-all',
         )}
       >
@@ -56,7 +56,7 @@ export default function Header() {
           className={clsx(
             'absolute right-3 top-5 sm:right-4 sm:top-6',
             'group rounded-sm p-3 md:hidden',
-            'transition-all hover:bg-neutral-50',
+            'transition-all hover:bg-white',
           )}
         >
           <div className='w-6'>
@@ -106,7 +106,7 @@ export default function Header() {
           className={clsx(
             'relative overflow-hidden rounded-sm',
             'after:h-full after:w-12 after:opacity-30 after:content-[""]',
-            'after:bg-gradient-to-r after:from-transparent after:via-neutral-50 after:to-transparent',
+            'after:bg-gradient-to-r after:from-transparent after:via-white after:to-transparent',
             'after:absolute after:-left-12 after:top-0',
             'after:animate-highLight',
             'drop-shadow-md',
