@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 }
 
 type Props = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
-export default function BlogDetail({ params }: Props) {
-  return <BlogDetailPage slug={params.slug} />
+export default async function BlogDetail({ params }: Props) {
+  return <BlogDetailPage slug={(await params).slug} />
 }
