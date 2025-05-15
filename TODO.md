@@ -1,5 +1,6 @@
 # Prioritize
 
+[] Check failed deployment on Vercel, fix it
 [] Migrate brand color to dark blue
 [] Update content in main page to TypeScript
 
