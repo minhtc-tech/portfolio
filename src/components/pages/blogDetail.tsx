@@ -3,7 +3,7 @@
 import Link from 'next/link'
 
 import Button from '@/components/atoms/button'
-import MarkdownRenderer from '@/components/atoms/markdownRenderer'
+import MarkdownRenderer from '@/components/molecules/markdownRenderer'
 import DefaultLayout from '@/components/templates/defaultLayout'
 import { getBlogDetailData } from '@/utils/getData'
 
@@ -15,7 +15,7 @@ export default async function BlogDetailPage({ slug }: Props) {
 
   return (
     <DefaultLayout>
-      <section className='mx-auto max-w-4xl pb-8'>
+      <section className='mx-auto max-w-4xl pb-8 pt-3'>
         <h1 className='pb-3 text-center text-3xl font-extraBold'>
           {blogDetailData.title}
         </h1>

@@ -30,7 +30,7 @@ export default function Button({
 
         'group relative flex items-center gap-3 overflow-hidden',
         'h-12 rounded-full border-md border-primary px-6',
-        'text-base font-bold',
+        'font-sans text-base font-bold',
 
         'transition-all hover:after:w-full',
       )}
