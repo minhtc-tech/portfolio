@@ -1,8 +1,6 @@
 # Prioritize
 
-[] Check failed deployment on Vercel, fix it
-[] Migrate brand color to dark blue
-[] Update content in main page to TypeScript
+[] Complete create first Video on Youtube Channel & Update Social Link
 
 # Improve code
 
@@ -13,4 +11,5 @@
 # Improve feature
 
 [] Update JetBrains font for code block in BlogDetail page
-[] Create copy button for code block
+[] Update Technical Data in constant for reuse
+[] Create Tag for each blog follow technical
