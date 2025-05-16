@@ -11,7 +11,7 @@ export default function Input({ attr, leftButton, rightButton }: Props) {
   return (
     <div
       className={clsx(
-        'relative flex h-12 w-full bg-neutral-50',
+        'relative flex h-12 w-full bg-white',
         'rounded-full border-md border-primary',
       )}
     >

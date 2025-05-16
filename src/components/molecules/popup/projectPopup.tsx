@@ -131,7 +131,7 @@ export default function ProjectPopup({ projectItem, onClosePopup }: Props) {
             className={clsx(
               'group -mb-1 mr-6 bg-primary-50 px-5 pb-[9px] pt-3',
               'rounded-tl-md rounded-tr-md border-lg border-primary',
-              'transition-all hover:bg-primary-600',
+              'transition-all hover:bg-primary-800',
             )}
           >
             <div className='w-4'>
@@ -141,7 +141,7 @@ export default function ProjectPopup({ projectItem, onClosePopup }: Props) {
 
           <div
             className={clsx(
-              'h-full w-full overflow-hidden bg-neutral-50',
+              'h-full w-full overflow-hidden bg-white',
               'rounded-lg border-lg border-primary',
             )}
           >

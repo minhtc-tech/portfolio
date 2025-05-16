@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+
+import { getBlogData } from '@/utils/getData'
 import BlogPage from '@/components/pages/blog'
 
 export const metadata: Metadata = {
@@ -6,6 +8,8 @@ export const metadata: Metadata = {
   description: 'MinhTC Tech Portfolio',
 }
 
-export default function Blog() {
-  return <BlogPage />
+export default async function Blog() {
+  const blogData = await getBlogData()
+
+  return <BlogPage blogData={blogData} />
 }

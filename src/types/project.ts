@@ -17,14 +17,10 @@ export type ProjectItemInterface = {
 type FilterDataDropdownPosition = 'left' | 'right'
 export type FilterMappingProp = 'mainTechStacks' | 'level'
 
-export type FilterDataItemInterface = {
-  dropdownPosition: FilterDataDropdownPosition
-  mappingFilterProp: FilterMappingProp
-  items: {
-    [key: string]: string
-  }
-}
-
 export type FilterDataInterface = {
-  [key: string]: FilterDataItemInterface
+  [key: string]: {
+    dropdownPosition: FilterDataDropdownPosition
+    mappingFilterProp: FilterMappingProp
+    items: { [key: string]: string }
+  }
 }

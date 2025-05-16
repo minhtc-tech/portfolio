@@ -19,7 +19,7 @@ export default function Button({
       {...attr}
       className={clsx(
         variant === 'primary'
-          ? 'text-invert before:bg-primary-600 after:bg-primary-700'
+          ? 'text-invert before:bg-primary-800 after:bg-primary-700'
           : 'text-primary after:bg-primary-50',
 
         'before:absolute before:-z-20',
@@ -30,7 +30,7 @@ export default function Button({
 
         'group relative flex items-center gap-3 overflow-hidden',
         'h-12 rounded-full border-md border-primary px-6',
-        'text-base font-bold',
+        'font-sans text-base font-bold',
 
         'transition-all hover:after:w-full',
       )}

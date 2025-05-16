@@ -3,22 +3,21 @@
 import clsx from 'clsx'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
 
-import Button from '@/components/atoms/button'
+import { BlogItem } from '@/types/blog'
 import ArrowIcon from '@/components/atoms/icons/arrow'
 import SearchIcon from '@/components/atoms/icons/search'
+import Button from '@/components/atoms/button'
 import Input from '@/components/atoms/input'
-import { BlogItem } from '@/types/blog'
+import DefaultLayout from '@/components/templates/defaultLayout'
 
-const PAGE_SIZE = 8
-const BLOG_ITEM_IMG_HEIGHT = 168
-const BLOG_IMG_RATIO = 1.905
+const PAGE_SIZE = 12
 
 type Props = {
   blogData: BlogItem[]
 }
-export default function BlogListSection({ blogData }: Props) {
+export default function BlogPage({ blogData }: Props) {
   const [searchValue, setSearchValue] = useState('')
   const [page, setPage] = useState(1)
 
@@ -36,38 +35,28 @@ export default function BlogListSection({ blogData }: Props) {
     setPage(newPage)
   }
 
-  const handleSearch = (value: string) => {
-    setSearchValue(value)
-    setPage(1)
-  }
-
   return (
-    <Fragment>
-      <section className='flex flex-wrap gap-6 pb-3 sm:pb-4 md:pb-6'>
+    <DefaultLayout>
+      <section
+        data-test='filter-blog-section'
+        className='flex flex-wrap gap-6 pb-3 sm:pb-4 md:pb-6'
+      >
         <div className='w-[320px]'>
           <Input
             attr={{
-              onChange: (event) => handleSearch(event.target.value),
-              type: 'string',
+              onChange: (event) => {
+                setSearchValue(event.target.value)
+                setPage(1)
+              },
               placeholder: 'Search',
             }}
-            rightButton={
-              <Button
-                variant='primary'
-                attr={{ title: 'Start search' }}
-                leftIcon={<SearchIcon />}
-              />
-            }
+            rightButton={<Button variant='primary' leftIcon={<SearchIcon />} />}
           />
         </div>
 
         <div className='group relative w-[224px]'>
           <Input
-            attr={{
-              type: 'text',
-              value: `${page} / ${maxPage}`,
-              disabled: true,
-            }}
+            attr={{ value: `${page} / ${maxPage}`, disabled: true }}
             leftButton={
               <Button
                 variant='primary'
@@ -75,11 +64,7 @@ export default function BlogListSection({ blogData }: Props) {
                   title: 'Go to previous page',
                   onClick: () => handlePageChange(page - 1),
                 }}
-                leftIcon={
-                  <div className='w-4 rotate-180'>
-                    <ArrowIcon />
-                  </div>
-                }
+                leftIcon={<ArrowIcon className='w-4 rotate-180' />}
               />
             }
             rightButton={
@@ -89,32 +74,27 @@ export default function BlogListSection({ blogData }: Props) {
                   title: 'Go to next page',
                   onClick: () => handlePageChange(page + 1),
                 }}
-                leftIcon={
-                  <div className='w-4'>
-                    <ArrowIcon />
-                  </div>
-                }
+                leftIcon={<ArrowIcon className='w-4' />}
               />
             }
           />
         </div>
       </section>
 
-      <section className='pb-8'>
+      <section data-test='blog-list-section' className='pb-8'>
         <div
           className={clsx(
             'grid gap-4 sm:gap-6 md:gap-8 lg:gap-8',
             'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4',
-            'pb-12 pt-5',
-            'transition-all duration-300',
+            'pb-12 pt-5 transition-all duration-300',
           )}
         >
-          {displayedBlogData.map((blogItem) => (
+          {displayedBlogData.map((blogItem, index) => (
             <Link
-              key={blogItem.node.slug}
+              key={`${blogItem.node.slug}-${index}`}
               href={`/blog/${blogItem.node.slug}`}
               className={clsx(
-                'group w-full overflow-hidden bg-neutral-50',
+                'group w-full overflow-hidden bg-white',
                 'rounded-md border-md border-primary drop-shadow-md',
                 'transition-all hover:drop-shadow-none',
               )}
@@ -122,20 +102,21 @@ export default function BlogListSection({ blogData }: Props) {
               <div
                 className={clsx(
                   'relative overflow-hidden',
-                  'border-b-md border-primary bg-primary-50',
-                  'flex h-[168px] items-start',
-                  'after:bg-gradient-to-r after:from-transparent after:via-neutral-50 after:to-transparent after:opacity-30',
-                  'after:absolute after:-left-[360px] after:top-0 after:h-full after:w-1/3 after:content-[""]',
+                  'flex items-start border-b-md border-primary',
+                  'after:bg-gradient-to-r after:opacity-30',
+                  'after:from-transparent after:via-white after:to-transparent',
+                  'after:absolute after:-left-[360px] after:top-0',
+                  'after:h-full after:w-1/3 after:content-[""]',
                   'group-hover:after:animate-highLight',
                 )}
               >
                 <Image
                   src={blogItem.node.coverImage.url}
-                  width={BLOG_ITEM_IMG_HEIGHT * BLOG_IMG_RATIO}
-                  height={BLOG_ITEM_IMG_HEIGHT}
+                  width={512}
+                  height={0}
                   alt={blogItem.node.title}
                   className={clsx(
-                    'min-h-[168px] grayscale filter',
+                    'grayscale filter',
                     'transition-all group-hover:scale-110 group-hover:grayscale-0',
                   )}
                 />
@@ -162,12 +143,17 @@ export default function BlogListSection({ blogData }: Props) {
           <div className='flex justify-center pb-12'>
             <Button
               variant='primary'
-              attr={{ onClick: () => handlePageChange(page + 1) }}
+              attr={{
+                onClick: () => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                  handlePageChange(page + 1)
+                },
+              }}
               content='Next Page'
             />
           </div>
         )}
       </section>
-    </Fragment>
+    </DefaultLayout>
   )
 }
