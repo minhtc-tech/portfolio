@@ -9,7 +9,7 @@ import {
 
 const client = new GraphQLClient(process.env.BLOG_API_URL)
 
-export const getBlogData = async () => {
+export async function getBlogData(): Promise<BlogItem[]> {
   const blogData: BlogItem[] = []
 
   const query = gql`
