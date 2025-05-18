@@ -1,5 +1,5 @@
 export const RESUME_LINK =
-  'https://drive.google.com/uc?id=1g3fmIMkV6gndFHeXdkT5ssnrjFg3CQXD&export=download'
+  'https://drive.google.com/uc?id=1roT6odv3SiRT1n81Wyd2Gx6Jp4CzUZ4f&export=download'
 
 export const techStacks = {
   Languages: [
